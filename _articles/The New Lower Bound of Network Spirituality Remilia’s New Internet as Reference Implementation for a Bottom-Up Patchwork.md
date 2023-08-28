@@ -3,7 +3,7 @@ published: true
 topic: 
 subtitle: 
 date: 2022-05-05
-tags: 
+tags: remilia
 ---
 # The New Lower Bound of Network Spirituality: Remilia’s New Internet as Reference Implementation for a Bottom-Up Patchwork
 
@@ -13,7 +13,7 @@ Particularly looking at the chat/forum/exocortex, Remco's remilia-net converges 
 
 Realtime chat (which featured in the interactive digital opening of Remilia’s debut show “I Long For Network Spirituality”) was already an end-game evolution of interactivity within text communications (keystrokes sent directly, creating perfect virtual replica), text animations & games, typing style & speed, temporarily typed text, all experimented w/ immediately. The important part however is the fact that community can be maintained by a surprisingly low number of actors, so long as someone types, and another reads, there is dynamic engagement. Maintaining baseline activity like this even in tiny groups fosters a healthy long-term.
 
-![[JP-WXDeW1IKElWJtrxc5G.webp]]
+![[rtchat.png]]
 
 Long term vision is evident throughout their proof of concepts, and analysis over the benefits and shortcomings of previous iterations. The spontaneous think-tank has waited long enough to dissolve research and development into one, no need to rush in with lazy & complex answers.
 
