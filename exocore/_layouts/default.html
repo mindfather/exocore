@@ -2,6 +2,7 @@
 {% include head-custom.html %}
 <html lang="{{ page.lang | default: site.lang | default: "en-US" }}">
   <body>
+      <canvas id="background" style="position:fixed;width: 100vw;height:100vh;top:0;left:0;"></canvas>
       {{ content }}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
     <script>anchors.add('.post-content h2, h3, h4, h5, h6');</script>
@@ -36,6 +37,71 @@
   })
   </script>
 
+  <script>
+    var starImage = new Image();
+    var stars = [];
+
+    function loadBackground() {
+      // Get our canvas ready
+      starImage.src =  "/assets/background/stars.png";
+      for (var i = 0; i < 40; i++) {
+          stars.push(new Star(
+          {y:Math.floor(Math.random()*window.innerHeight), x: Math.floor(Math.random()*window.innerWidth)},
+          {x:Math.random()* 8 - 4, y: Math.random()*3},
+          Math.floor(Math.random()*100),
+          Math.random() > 0.5 ? 1 : -1
+          ));
+      }
+
+      window.requestAnimationFrame(draw);
+    }
+
+    function draw() {
+        var ctx = document.querySelector('#background').getContext('2d');
+        ctx.canvas.width = window.innerWidth;
+        ctx.canvas.height = window.innerHeight;
+        var grd = ctx.createLinearGradient(0,0,0,window.innerHeight);
+        grd.addColorStop(0, "black");
+        grd.addColorStop(1, "#00008c");
+        ctx.fillStyle = grd;
+        ctx.fillRect(0,0,window.innerWidth, window.innerHeight);
+
+        ctx.save();
+        for(var star of stars) {
+            star.draw(ctx);
+            star.update();
+        }
+        ctx.restore();
+
+
+        window.requestAnimationFrame(draw);
+    }
+
+    class Star {
+        constructor(position, velocity, frame, direction) {
+            this.position = position;
+            this.velocity = velocity;
+            this.frame = frame;
+            this.direction = direction;
+        }
+
+        draw(ctx) {
+            ctx.drawImage(starImage, 0, this.frame*24, 24, 24, this.position.x, this.position.y, 48, 48);
+        }
+
+        update() {
+            this.frame = (this.frame + this.direction + 128) % 128;
+            this.position = {
+                x: calcPosition(this.position.x, this.velocity.x, window.innerWidth, 20),
+                y: calcPosition(this.position.y, this.velocity.y, window.innerHeight, 20),
+            };
+        }
+    }
+    function calcPosition(pos, vel, mod, buffer) {
+        return ((pos + buffer + vel + (mod + 2*buffer)) % (mod + 2*buffer)) - buffer;
+    }
+   loadBackground();
+  </script>
 
   </body>
 </html>
