@@ -78,4 +78,3 @@ charles  has not adjusted his body  to the netwrok . he is still getting "carsic
 having a new monitor added is like getting a new limb stitched onto your bodyt . conversely. I was mutilated when my diamondtron 2060u broke
 
 stock traders with 30 monitors a re  like  the hindu dieties
-

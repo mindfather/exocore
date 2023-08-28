@@ -11,3 +11,8 @@ docs/.sass-cache
 docs/.jekyll-metadata
 .test-workspace
 .jekyll-cache
+.obsidian
+_site/articles
+_site/daily
+_site/journal
+_site/pages
