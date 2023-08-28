@@ -4,22 +4,22 @@
 
 /* --- Body Colors --- */
 
-$background: #f0e0d6;
-$color-border: none;
-$color-inner-divs: #fffbf0;
-$color-items: antiquewhite;
+$background: #eef2ff;
+$color-border: #b7c5d9;
+$color-inner-divs: #d6daf0;
+$color-items: #eef2ff;
 
 
 /* --- Text Colors --- */
-$color-text: #800000;
-$color-subtext: black;
+$color-text: black;
+$color-subtext: #0f0c5d;
 $color-code: #707070;
 $internal-links: blue;
 $external-links: #34345c;
 $invalid-links: $internal-links;
-$color-primary: #cc1105;
-$color-secondary: #117743;
-$color-box-shadow: #d9bfb7;
+$color-primary: blue;
+$color-secondary: #789922;
+$color-box-shadow: #d6daf0;
 
 
 /* --- Borders --- */
@@ -58,8 +58,8 @@ $font-family-monospace: ”Iosevka Term SS03”,”IBM Plex Mono”,”Fira Code
 /* NODE COLOUR */
 --graph-node-stroke-color: transparent;
 --graph-node-missing-color: black;
---graph-node-unvisited-color: brown;
---graph-node-visited-color: brown;
+--graph-node-unvisited-color: indigo;
+--graph-node-visited-color: indigo;
 /* NODE GLOW */
 --graph-node-current-glow: transparent;
 --graph-node-tagged-glow: transparent;
@@ -75,6 +75,10 @@ $font-family-monospace: ”Iosevka Term SS03”,”IBM Plex Mono”,”Fira Code
 
 }
 
+#background {
+  z-index:-1;
+}
+
 /* === Body === */
 
 article {
@@ -85,8 +89,8 @@ article {
 }
 
 body {
-  background-color: black;
-  background-image: url("/assets/imgs/bg-yotsuba.gif");
+  //background-color: black;
+  //background-image: url("/assets/imgs/bg-yotsuba.gif");
   background-repeat: repeat;
   box-sizing: content-box;
   font-family: $font-family-sans-serif;
@@ -103,7 +107,7 @@ body {
   overflow-x: hidden;
   color: $color-text;
   font-size: 1rem;
-  background-color:$background;
+  //background-color:$background;
 }
 
 
@@ -144,7 +148,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .title-text {
-  color:#cc1105;
+  color:#0f0c5d;
   font-weight:bold;
   font-size:1.2em;
   line-height:1em;
@@ -155,9 +159,9 @@ h1,h2,h3,h4,h5,h6 {
   text-decoration:none !important;
 }
 
-h1 {color:#117743; font-weight:bold; text-decoration:underline; font-size: 1.3em;}
-h2 {color:#117743; font-weight:bold;}
-h3 {color:#117743; font-weight:normal; text-decoration:underline}
+h1 {color:#789922; font-weight:bold; text-decoration:underline; font-size: 1.3em;}
+h2 {color:#789922; font-weight:bold;}
+h3 {color:#789922; font-weight:normal; text-decoration:underline}
 h4 {text-transform:none;font-weight:strong; font-size:1em;}
 h5 {text-transform:none;font-weight:normal; text-decoration:underline; tfont-size:1em;}
 
@@ -183,7 +187,7 @@ a {
   text-decoration:underline;
   }
     a:hover {
-    color:red !important;
+    color:blue !important;
     text-decoration: underline;
     cursor: pointer;
   }
@@ -440,10 +444,8 @@ article {
 }
 
 .profile-pic {
-    border-radius: 50%;
     width: 55px;
-    margin-bottom: 0.5em;
-    
+
     @media (max-width: 900px)
      {float: 100%;
          margin: auto
@@ -569,7 +571,7 @@ img+em {
   // margin: 0.5em 0.5em auto auto;
   // position: absolute;
   float: right;
-  background-color: red;
+  background-color: blue;
   color: white;
   border: thin solid black;
 }
