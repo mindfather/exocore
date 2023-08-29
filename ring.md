@@ -9,3 +9,4 @@ title: Webring
 | [soma.cx](https://soma.cx/home)                                  | Knowledge Repository and gateway to somachat |
 | [Luke Smith](https://lukesmith.xyz)                              | Linguist showcasing that "non-devs" can be computer literate | 
 | [Teresa Television](https://otakucanchangetheworld.netlify.app/) | Otaku can change the world |
+| [Homer](https://homer.reisen/)                                    | Homer's Exocore |
