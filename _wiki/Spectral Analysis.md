@@ -43,7 +43,7 @@ Music which was recorded in an analog-only environment is much easier to judge u
 
 The main tell of lossy -> lossy transcodes is the fact that the peak frequencies will seem boosted when compared to a more proper encode.
 
-![[Pasted image 20230907121600.png]]
+![[spek.png]]
 
 Yet this is something that is encountered a bit less in modern times as we are able to seek out lossless files more often with less concern for storage space.
 
